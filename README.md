@@ -47,7 +47,7 @@
 　・Google Mapsの表示（Google Maps JavaScript API）  
 
 ■画面遷移図
-　https://www.figma.com/design/0G4bw1qCXJFsLDpwcokcDg/%E7%84%A1%E9%A1%8C?node-id=0-1&t=rsvJV5AhebvHmiGd-1  
+  https://www.figma.com/design/0G4bw1qCXJFsLDpwcokcDg/%E7%84%A1%E9%A1%8C?node-id=0-1&t=rsvJV5AhebvHmiGd-1  
 
 ■ER図
-https://gyazo.com/cef2ff31e32300d990de4163ceaef228
+  https://gyazo.com/a41484ee948d7c70cf2dda7ddc0cb7e1  
