@@ -50,4 +50,4 @@
   https://www.figma.com/design/0G4bw1qCXJFsLDpwcokcDg/%E7%84%A1%E9%A1%8C?node-id=0-1&t=rsvJV5AhebvHmiGd-1  
 
 ■ER図
-  https://gyazo.com/a41484ee948d7c70cf2dda7ddc0cb7e1  
+  https://gyazo.com/c7fa77fcbfb7e1f7a54dcaa971de7ac0  
