@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>App</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>CoffeeBlog</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
+<body>
+  <header style="background-image: url('<%= asset_path('coffee_beans.jpg') %>'); background-size: cover; text-align: center; padding: 100px 0;">
+    <h1>CoffeeBlog</h1>
+  </header>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= yield %>
+</body>
 </html>

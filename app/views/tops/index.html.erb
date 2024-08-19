@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>最新投稿</h2>
+  <div class="posts">
+    <% @posts.each do |post| %>
+      <div class="post">
+        <h3><%= link_to post.title, post_path(post) %></h3>
+        <p><%= truncate(post.content, length: 100) %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to 'More', posts_path, class: 'btn btn-primary' if @posts.count > 6 %>
+</div>

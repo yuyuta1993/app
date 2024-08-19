@@ -1,15 +1,7 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  host: db
-  username: user
-  password: password
-
 development:
-  <<: *default
-  database: app_development
-
-test:
-  <<: *default
-  database: app_test
+  adapter: mysql2
+  encoding: utf8
+  database: coffee_app
+  username: root
+  password: your_password
+  host: localhost

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  store_name: MyString
+  beans_name: MyString
+  roast_level: 1
+  coffee_growing_regions: MyString
+  photo: MyText
+  memo: MyText
+
+two:
+  user_id: 1
+  store_name: MyString
+  beans_name: MyString
+  roast_level: 1
+  coffee_growing_regions: MyString
+  photo: MyText
+  memo: MyText
