@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # ユーザー登録ページのルーティング
+  get 'signup', to: 'users#new'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # ユーザー作成のルーティング (POSTメソッドを使用)
+  post 'users', to: 'users#create'
 
+
+
+  # トップページのルート設定
   root 'tops#index'
 end

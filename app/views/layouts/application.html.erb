@@ -12,6 +12,12 @@
     <h1>CoffeeBlog</h1>
   </header>
 
+  <% if flash[:success] %>
+    <div class="alert alert-success">
+      <%= flash[:success] %>
+    </div>
+  <% end %>
+
   <%= yield %>
 </body>
 </html>
