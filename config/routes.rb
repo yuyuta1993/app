@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   post 'users', to: 'users#create'
 
 
-
   # トップページのルート設定
   root 'tops#index'
 end
