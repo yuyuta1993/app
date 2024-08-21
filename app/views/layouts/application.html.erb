@@ -8,8 +8,8 @@
 </head>
 
 <body>
-  <header style="background-image: url('<%= asset_path('coffee_beans.jpg') %>'); background-size: cover; text-align: center; padding: 100px 0;">
-    <h1>CoffeeBlog</h1>
+  <header>
+    <%= render 'shared/header' %>
   </header>
 
   <%= yield %>
