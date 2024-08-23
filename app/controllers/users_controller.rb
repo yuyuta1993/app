@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_login
+
   def new
     @user = User.new
   end
@@ -6,13 +8,18 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to the CoffeeBlog!"
-      redirect_to root_path  # 登録後にトップページへリダイレクト
+      session[:user_id] = @user.id
+      redirect_to root_path, notice: "Successfully signed up!"
     else
-      render 'new'  # 入力内容にエラーがあれば再度フォームを表示
+      render 'new'
     end
   end
 
+  def show
+    @user = current_user  # 現在のログインユーザー
+    @posts = @user.posts.limit(6).order(created_at: :desc)  # 自身の投稿
+    @favorites = @user.favorited_posts.limit(6).order(created_at: :desc)  # お気に入り投稿
+  end
 
   private
 
