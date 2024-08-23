@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'tops#index'
 
   get 'sessions/new'
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   post 'users', to: 'users#create'
   get 'mypage', to: 'users#show'
+
 
   post 'signup', to: 'users#create'
 
