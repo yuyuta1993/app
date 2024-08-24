@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_19_024718) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema[7.0].define(version: 2024_08_24_143554) do
+  create_table "favorites", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "post_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_favorites_on_post_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "store_name"
     t.string "beans_name"
@@ -26,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_19_024718) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "user_name"
     t.string "email"
     t.string "password_digest"
@@ -35,4 +41,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_19_024718) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "favorites", "posts"
+  add_foreign_key "favorites", "users"
 end

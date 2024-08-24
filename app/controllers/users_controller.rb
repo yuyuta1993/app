@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_login
+  before_action :require_login, except: [:new, :create]
 
   def new
     @user = User.new
@@ -25,5 +25,12 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:user_name, :email, :password, :password_confirmation)
+  end
+
+  def require_login
+    unless current_user
+      flash[:error] = "ログインが必要です"
+      redirect_to login_path
+    end
   end
 end

@@ -1,13 +1,14 @@
 version: '3.9'
 services:
   db:
-    image: postgres:14
+    image: mysql:8.0
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - mysql-data:/var/lib/mysql
     environment:
-      POSTGRES_PASSWORD: password
-      POSTGRES_USER: user
-      POSTGRES_DB: app_development
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: app_development
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
 
   web:
     image: ruby:3.0.2
@@ -20,8 +21,8 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgres://user:password@db:5432/app_development
+      DATABASE_URL: mysql2://user:password@db:3306/app_development
       RAILS_ENV: development
 
 volumes:
-  postgres-data:
+  mysql-data:

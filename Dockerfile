@@ -2,7 +2,7 @@
 FROM ruby:3.0.2
 
 # 必要なライブラリをインストール
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN apt-get update -qq && apt-get install -y nodejs mysql-client
 
 # 作業ディレクトリを作成
 WORKDIR /app
