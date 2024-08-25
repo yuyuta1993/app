@@ -5,6 +5,6 @@ class User < ApplicationRecord
   has_many :favorited_posts, through: :favorites, source: :post
 
   validates :user_name, presence: true, uniqueness: true
-  validates :email, presence: true, uniqueness: true
-  validates :password_digest, presence: true
+  validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :password_digest, presence: true, length: { minimum: 6 }
 end
