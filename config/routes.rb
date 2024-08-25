@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # MyPage route
   get 'mypage', to: 'users#show'
 
+  # Posts routes
+  resources :posts, only: [:new, :create]
+
   # Nested resources for users
   resources :users, only: [:create, :show] do
     resources :posts, only: [:index]  # ユーザーが投稿した全ての投稿
