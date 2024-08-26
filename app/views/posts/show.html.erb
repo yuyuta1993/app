@@ -1,0 +1,9 @@
+<h1><%= @post.beans_name %></h1>
+<p>購入店舗: <%= @post.store_name %></p>
+<p>焙煎度: <%= @post.roast_level %></p>
+<p>生産地: <%= @post.coffee_growing_regions %></p>
+<p>メモ: <%= @post.memo %></p>
+
+<% if @post.photo.attached? %>
+  <%= image_tag @post.photo %>  <!-- アップロードされた写真を表示 -->
+<% end %>

@@ -1,2 +1,5 @@
-<h1>Sessions#destroy</h1>
-<p>Find me in app/views/sessions/destroy.html.erb</p>
+def destroy
+  # ログアウト処理
+  log_out
+  redirect_to root_path, notice: 'ログアウトしました'
+end

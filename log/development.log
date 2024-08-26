@@ -3449,3 +3449,988 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 442ms (Views: 39.5ms | ActiveRecord: 196.7ms | Allocations: 26741)
 
 
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateActiveStorageTables (20240825074659)
+  [1m[35m (205.4ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `service_name` varchar(255) NOT NULL, `byte_size` bigint NOT NULL, `checksum` varchar(255), `created_at` datetime(6) NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key` (`key`))[0m
+  [1m[35m (70.5ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, INDEX `index_active_storage_attachments_on_blob_id` (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness` (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (56.6ms)[0m  [1m[35mCREATE TABLE `active_storage_variant_records` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `blob_id` bigint NOT NULL, `variation_digest` varchar(255) NOT NULL, UNIQUE INDEX `index_active_storage_variant_records_uniqueness` (`blob_id`, `variation_digest`), CONSTRAINT `fk_rails_993965df05`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240825074659')[0m
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 00:41:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (62.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 00:44:56 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 01:07:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 01:09:09 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 01:59:32 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 08:48:13 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 08:48:17 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 09:02:39 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 09:02:41 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 09:07:19 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 09:07:26 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 09:08:05 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.23.0.1 at 2024-08-26 09:08:06 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 172.26.0.1 at 2024-08-26 11:21:30 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (18.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 20053)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 23894)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 9.6ms | Allocations: 44063)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.26.0.1 at 2024-08-26 11:32:25 +0000
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (14.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 35.2ms | Allocations: 1247)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 3763)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 29.9ms | Allocations: 4316)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.27.0.1 at 2024-08-26 11:35:52 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (5.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 20053)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 28787)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 14.5ms | Allocations: 48956)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /app/app/assets/config
+  /app/app/assets/images
+  /app/app/assets/javascripts
+  /app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-2.0.6/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.8.4/lib/assets/compiled
+  /app/app/javascript
+  /app/vendor/javascript):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.27.0.1 at 2024-08-26 11:39:43 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 6620)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 7006)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /app/app/assets/config
+  /app/app/assets/images
+  /app/app/assets/javascripts
+  /app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-2.0.6/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.8.4/lib/assets/compiled
+  /app/app/javascript
+  /app/vendor/javascript):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.27.0.1 at 2024-08-26 11:40:08 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1159)
+  Rendered layout layouts/application.html.erb (Duration: 224.0ms | Allocations: 93015)
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 0.8ms | Allocations: 93352)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+
+and restart your server):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.27.0.1 at 2024-08-26 14:16:48 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1155)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6771)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.7ms | Allocations: 7088)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /app/app/assets/config
+  /app/app/assets/images
+  /app/app/assets/javascripts
+  /app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-2.0.6/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.8.4/lib/assets/compiled
+  /app/app/javascript
+  /app/vendor/javascript):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.27.0.1 at 2024-08-26 14:17:03 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1159)
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 25540)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 1.8ms | Allocations: 25865)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+
+and restart your server):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.27.0.1 at 2024-08-26 14:19:01 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1155)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 18031)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.3ms | Allocations: 18348)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+
+and restart your server):
+    4:   <title>CoffeeBlog</title>
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    8: </head>
+    9: 
+   10: <body>
+  
+app/views/layouts/application.html.erb:7
+Started GET "/" for 172.27.0.1 at 2024-08-26 14:20:51 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1155)
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 461)
+  Rendered layout layouts/application.html.erb (Duration: 77.3ms | Allocations: 20834)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 1.6ms | Allocations: 21223)
+
+
+Started GET "/" for 172.27.0.1 at 2024-08-26 14:20:56 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1155)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2546)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.3ms | Allocations: 2896)
+
+
+Started GET "/signup" for 172.27.0.1 at 2024-08-26 14:20:58 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 3644)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 5070)
+Completed 200 OK in 114ms (Views: 31.9ms | ActiveRecord: 11.2ms | Allocations: 25319)
+
+
+Started GET "/signup" for 172.27.0.1 at 2024-08-26 14:20:59 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1254)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2454)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 2822)
+
+
+Started GET "/login" for 172.27.0.1 at 2024-08-26 14:21:03 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2884)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4276)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 5273)
+
+
+Started GET "/login" for 172.27.0.1 at 2024-08-26 14:23:02 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2868)
+  Rendered shared/_header.html.erb (Duration: 1.0ms | Allocations: 450)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5014)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 6231)
+
+
+Started GET "/" for 172.27.0.1 at 2024-08-26 14:23:06 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1590)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3316)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 1.9ms | Allocations: 4306)
+
+
+Started GET "/signup" for 172.27.0.1 at 2024-08-26 14:23:07 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1997)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 3483)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 4449)
+
+
+Started GET "/" for 172.27.0.1 at 2024-08-26 14:23:09 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1248)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 2701)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 1.6ms | Allocations: 3097)
+
+
+Started GET "/posts/1" for 172.27.0.1 at 2024-08-26 14:23:10 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 605)
+
+
+Started GET "/login" for 172.27.0.1 at 2024-08-26 14:23:10 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2479)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3879)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4235)
+
+
+Started GET "/login" for 172.27.0.1 at 2024-08-26 14:23:16 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2412)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3702)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4013)
+
+
+Started GET "/signup" for 172.27.0.1 at 2024-08-26 14:23:17 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1297)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2587)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 2924)
+
+
+Started GET "/login" for 172.27.0.1 at 2024-08-26 14:23:19 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2422)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3713)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4025)
+
+
+Started POST "/login" for 172.27.0.1 at 2024-08-26 14:23:26 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (18.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'test@test' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 315ms (ActiveRecord: 18.2ms | Allocations: 2584)
+
+
+Started GET "/mypage" for 172.27.0.1 at 2024-08-26 14:23:27 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` WHERE `posts`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/users/show.html.erb:12
+  [1m[36mPost Load (4.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` INNER JOIN `favorites` ON `posts`.`id` = `favorites`.`post_id` WHERE `favorites`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` INNER JOIN `favorites` ON `posts`.`id` = `favorites`.`post_id` WHERE `favorites`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (Duration: 25.8ms | Allocations: 5815)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 7364)
+Completed 200 OK in 67ms (Views: 24.3ms | ActiveRecord: 10.3ms | Allocations: 19194)
+
+
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:23:33 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:28:45 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:28:52 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:29:24 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:29:25 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:30:49 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:30:50 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:31:01 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:32:41 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:34:12 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:34:37 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:34:58 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:35:33 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:35:56 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:40:14 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:46:06 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:49:13 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:57:20 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:57:29 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 14:59:30 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 15:00:09 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 15:11:42 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 15:11:44 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 15:16:36 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 15:22:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for 172.27.0.1 at 2024-08-26 15:26:18 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 303 See Other in 8ms (ActiveRecord: 0.0ms | Allocations: 474)
+
+
+Started GET "/" for 172.27.0.1 at 2024-08-26 15:26:18 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (27.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (6.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 56.3ms | Allocations: 3908)
+  Rendered layout layouts/application.html.erb (Duration: 90.1ms | Allocations: 9903)
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 56.3ms | Allocations: 21765)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /app/app/assets/config
+  /app/app/assets/images
+  /app/app/assets/javascripts
+  /app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-2.0.6/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.8.4/lib/assets/compiled
+  /app/app/javascript
+  /app/vendor/javascript):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+     8:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+     9:   <%= javascript_importmap_tags %>
+    10: </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8
+Started GET "/" for 172.27.0.1 at 2024-08-26 15:27:18 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1155)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 6528)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms | Allocations: 6888)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /app/app/assets/config
+  /app/app/assets/images
+  /app/app/assets/javascripts
+  /app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-2.0.6/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.8.4/lib/assets/compiled
+  /app/app/javascript
+  /app/vendor/javascript):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+     8:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+     9:   <%= javascript_importmap_tags %>
+    10: </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8
+Started GET "/" for 172.27.0.1 at 2024-08-26 15:57:18 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (21.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (6.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 63.4ms | Allocations: 1155)
+  Rendered layout layouts/application.html.erb (Duration: 147.7ms | Allocations: 8227)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 40.8ms | Allocations: 8695)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /app/app/assets/config
+  /app/app/assets/images
+  /app/app/assets/javascripts
+  /app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.3.4/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-2.0.6/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8.4/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.8.4/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.8.4/lib/assets/compiled
+  /app/app/javascript
+  /app/vendor/javascript):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+     8:   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+     9:   <%= javascript_importmap_tags %>
+    10: </head>
+    11: 
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:8
+Started GET "/" for 172.28.0.1 at 2024-08-26 16:11:24 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (74.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (12.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (13.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 84.7ms | Allocations: 20054)
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 467)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 23290)
+Completed 200 OK in 198ms (Views: 74.4ms | ActiveRecord: 47.1ms | Allocations: 43865)
+
+
+Started GET "/" for 172.28.0.1 at 2024-08-26 16:11:30 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1163)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 2074)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 1.5ms | Allocations: 2710)
+
+
+Started GET "/login" for 172.28.0.1 at 2024-08-26 16:11:32 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 37.8ms | Allocations: 3907)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 4971)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.0ms | Allocations: 6206)
+
+
+Started POST "/login" for 172.28.0.1 at 2024-08-26 16:11:38 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'test@test' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 312ms (ActiveRecord: 18.6ms | Allocations: 21746)
+
+
+Started GET "/mypage" for 172.28.0.1 at 2024-08-26 16:11:39 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` WHERE `posts`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/users/show.html.erb:12
+  [1m[36mPost Load (8.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` INNER JOIN `favorites` ON `posts`.`id` = `favorites`.`post_id` WHERE `favorites`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` INNER JOIN `favorites` ON `posts`.`id` = `favorites`.`post_id` WHERE `favorites`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (Duration: 30.6ms | Allocations: 5896)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 7045)
+Completed 200 OK in 72ms (Views: 24.9ms | ActiveRecord: 14.4ms | Allocations: 19637)
+
+
+Started DELETE "/logout" for 172.28.0.1 at 2024-08-26 16:11:44 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [DELETE] "/logout"):
+  
+Started DELETE "/logout" for 172.28.0.1 at 2024-08-26 16:14:16 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 303 See Other in 62ms (ActiveRecord: 0.0ms | Allocations: 546)
+
+
+Started GET "/" for 172.28.0.1 at 2024-08-26 16:14:20 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (7.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (5.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 164.7ms | Allocations: 3748)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 599.6ms | Allocations: 6026)
+Completed 200 OK in 1221ms (Views: 553.5ms | ActiveRecord: 388.4ms | Allocations: 18003)
+
+
+Started GET "/login" for 172.28.0.1 at 2024-08-26 16:14:26 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 24.7ms | Allocations: 2388)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 3419)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 4467)
+
+
+Started POST "/login" for 172.28.0.1 at 2024-08-26 16:14:32 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"test@test", "password"=>"[FILTERED]", "commit"=>"ログイン"}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'test@test' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 334ms (ActiveRecord: 22.2ms | Allocations: 7647)
+
+
+Started GET "/mypage" for 172.28.0.1 at 2024-08-26 16:14:32 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (21.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` WHERE `posts`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/users/show.html.erb:12
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` INNER JOIN `favorites` ON `posts`.`id` = `favorites`.`post_id` WHERE `favorites`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` INNER JOIN `favorites` ON `posts`.`id` = `favorites`.`post_id` WHERE `favorites`.`user_id` = 1 ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/users/show.html.erb:23
+  Rendered users/show.html.erb within layouts/application (Duration: 48.9ms | Allocations: 3167)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 54.3ms | Allocations: 4272)
+Completed 200 OK in 147ms (Views: 33.4ms | ActiveRecord: 31.2ms | Allocations: 12034)
+
+
+Started DELETE "/logout" for 172.28.0.1 at 2024-08-26 16:14:36 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.0ms | Allocations: 460)
+
+
+Started GET "/" for 172.28.0.1 at 2024-08-26 16:14:36 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 6) subquery_for_count[0m
+  ↳ app/views/tops/index.html.erb:12
+  Rendered tops/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1159)
+  Rendered shared/_header.html.erb (Duration: 1.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 2068)
+Completed 200 OK in 25ms (Views: 19.9ms | ActiveRecord: 1.6ms | Allocations: 2651)
+
+
+Started GET "/posts/1" for 172.28.0.1 at 2024-08-26 16:14:39 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 53ms (ActiveRecord: 0.0ms | Allocations: 602)
+
+
+Started GET "/login" for 172.28.0.1 at 2024-08-26 16:14:39 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 23.2ms | Allocations: 2312)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3246)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 3803)
+
+

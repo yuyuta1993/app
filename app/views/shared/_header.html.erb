@@ -8,11 +8,12 @@
 
     <% if logged_in? %>
       <li><%= link_to 'マイページ', mypage_path %></li>
+      <li><%= link_to '新規投稿', new_post_path %></li>
       <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
-    <% else %>
+      <% else %>
       <li><%= link_to '新規登録', signup_path %></li>
       <li><%= link_to 'ログイン', login_path %></li>
-      <% end %>
+    <% end %>
     </ul>
   </nav>
 </div>

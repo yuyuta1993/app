@@ -18,13 +18,23 @@
   </div>
 
   <div class="field">
-    <%= form.label :beans_name, 'コーヒー豆の名前' %><br>
+    <%= form.label :beans_name, 'コーヒー豆' %><br>
     <%= form.text_field :beans_name %>
   </div>
 
   <div class="field">
-    <%= form.label :roast_level, '焙煎度 (1:ライト, 2:ミディアム, 3:ダーク)' %><br>
-    <%= form.number_field :roast_level %>
+    <%= form.label :roast_level, '焙煎度' %><br>
+    <%= form.select :roast_level, options_for_select([
+      ['生豆 (raw beans)', 0],
+      ['ライトロースト (Light roast)', 1],
+      ['シナモンロースト (Cinnamon roast)', 2],
+      ['ミディアムロースト (Medium roast)', 3],
+      ['ハイロースト (High roast)', 4],
+      ['シティロースト (City roast)', 5],
+      ['フルシティロースト (Fullcity roast)', 6],
+      ['フレンチロースト (French roast)', 7],
+      ['イタリアンロースト (Italian roast)', 8]
+    ]), { include_blank: '選択してください' } %>
   </div>
 
   <div class="field">
@@ -33,8 +43,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :photo, '写真のURL' %><br>
-    <%= form.text_area :photo %>
+    <%= form.label :photo, '写真をアップロード' %><br>
+    <%= form.file_field :photo %>  <!-- ここでファイルをアップロード -->
   </div>
 
   <div class="field">

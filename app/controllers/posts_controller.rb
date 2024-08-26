@@ -1,15 +1,29 @@
 class PostsController < ApplicationController
+  before_action :require_login
+
   def new
     @post = Post.new
   end
 
   def create
-    @post = current_user.posts.build(post_params)
+    roast_level_param = post_params[:roast_level].to_i
+
+    @post = current_user.posts.build(post_params.merge(roast_level: roast_level_param))
     if @post.save
       redirect_to mypage_path, notice: '投稿が成功しました。'
     else
       flash.now[:alert] = '投稿に失敗しました。'
       render :new
+    end
+  end
+
+  def show
+    @post = Post.find_by(id: params[:id])
+    
+    # 投稿が見つからない場合の処理
+    if @post.nil?
+      flash[:alert] = "投稿が見つかりませんでした。"
+      redirect_to root_path
     end
   end
 
