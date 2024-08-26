@@ -1,2 +1,58 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>新規投稿</h1>
+
+<%= form_with(model: @post, local: true) do |form| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :store_name, '店舗名' %><br>
+    <%= form.text_field :store_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beans_name, 'コーヒー豆' %><br>
+    <%= form.text_field :beans_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :roast_level, '焙煎度' %><br>
+    <%= form.select :roast_level, options_for_select([
+      ['生豆 (raw beans)', 0],
+      ['ライトロースト (Light roast)', 1],
+      ['シナモンロースト (Cinnamon roast)', 2],
+      ['ミディアムロースト (Medium roast)', 3],
+      ['ハイロースト (High roast)', 4],
+      ['シティロースト (City roast)', 5],
+      ['フルシティロースト (Fullcity roast)', 6],
+      ['フレンチロースト (French roast)', 7],
+      ['イタリアンロースト (Italian roast)', 8]
+    ]), { include_blank: '選択してください' } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coffee_growing_regions, '生産地' %><br>
+    <%= form.text_field :coffee_growing_regions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo, '写真をアップロード' %><br>
+    <%= form.file_field :photo %>  <!-- ここでファイルをアップロード -->
+  </div>
+
+  <div class="field">
+    <%= form.label :memo, 'メモ' %><br>
+    <%= form.text_area :memo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit '投稿する' %>
+  </div>
+<% end %>

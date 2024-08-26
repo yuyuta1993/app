@@ -4,7 +4,9 @@
   <title>CoffeeBlog</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  <%= javascript_importmap_tags %>
 </head>
 
 <body>
@@ -13,7 +15,7 @@
   </header>
   
   <header style="background-image: url('<%= asset_path('coffee_beans.jpg') %>'); background-size: cover; text-align: center; padding: 100px 0;">
-　</header>
+  </header>
   
   <%= yield %>
 </body>
