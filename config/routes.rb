@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get 'mypage', to: 'users#show'
 
   # Posts routes
-  resources :posts, only: [:new, :create, :show] 
+  resources :posts, only: [:index, :new, :create, :show]
+
+  get 'search', to: 'posts#index', as: 'search'
 
   # Nested resources for users
   resources :users, only: [:create, :show] do
