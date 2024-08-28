@@ -2,18 +2,26 @@
   <div class="navbar-brand">
     <%= link_to 'CoffeeBlog', root_path %>
   </div>
+
+  <div class="navbar-center">
+    <%= form_with(url: search_path, method: :get, local: true, class: "search-form") do |form| %>
+      <%= form.text_field :q, placeholder: "検索ワードを入力", class: "search-input" %>
+      <%= form.submit "検索", class: "search-button" %>
+    <% end %>
+  </div>
+
   <nav>
     <ul>
-    <li><%= link_to 'ホーム', root_path %></li>
-
-    <% if logged_in? %>
-      <li><%= link_to 'マイページ', mypage_path %></li>
-      <li><%= link_to '新規投稿', new_post_path %></li>
-      <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+      <li><%= link_to 'ホーム', root_path %></li>
+      <% if logged_in? %>
+        <li><%= link_to 'マイページ', mypage_path %></li>
+        <li><%= link_to '新規投稿', new_post_path %></li>
+        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
       <% else %>
-      <li><%= link_to '新規登録', signup_path %></li>
-      <li><%= link_to 'ログイン', login_path %></li>
-    <% end %>
+        <li><%= link_to '新規登録', signup_path %></li>
+        <li><%= link_to 'ログイン', login_path %></li>
+      <% end %>
     </ul>
   </nav>
 </div>
+

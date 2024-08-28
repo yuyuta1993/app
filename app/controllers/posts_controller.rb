@@ -1,6 +1,21 @@
 class PostsController < ApplicationController
   before_action :require_login
 
+  def index
+    if params[:q].present?
+      search_query = params[:q]
+
+      roast_level = Post.roast_levels.key(search_query) # Enum 検索用
+
+      @posts = Post.where(
+        "store_name LIKE :query OR beans_name LIKE :query OR coffee_growing_regions LIKE :query OR memo LIKE :query OR roast_level = :roast_level",
+        query: "%#{search_query}%", roast_level: roast_level
+      )
+    else
+      @posts = Post.all
+    end
+  end
+
   def new
     @post = Post.new
   end
