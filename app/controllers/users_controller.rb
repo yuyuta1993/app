@@ -21,6 +21,25 @@ class UsersController < ApplicationController
     @favorites = @user.favorited_posts.limit(6).order(created_at: :desc)  # お気に入り投稿
   end
 
+  def account
+    @user = current_user  # 現在のログインユーザーを取得
+  end
+
+    # パスワード編集ページの表示
+    def edit_password
+      @user = current_user
+    end
+  
+    # パスワードの更新処理
+    def update_password
+      @user = current_user
+      if @user.update(user_params)
+        redirect_to account_path, notice: 'パスワードが更新されました。'
+      else
+        render 'edit_password'
+      end
+    end
+
   private
 
   def user_params

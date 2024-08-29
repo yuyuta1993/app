@@ -1,0 +1,8 @@
+<!-- app/views/users/account.html.erb -->
+<h1>アカウント情報</h1>
+
+<p>メールアドレス: <%= @user.email %></p>
+
+<p>パスワード: ******</p> <!-- パスワードは通常表示しない -->
+
+<%= link_to 'パスワードを変更する', edit_password_path %> <!-- 修正されたパスワード変更リンク -->
