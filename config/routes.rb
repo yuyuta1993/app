@@ -13,10 +13,17 @@ Rails.application.routes.draw do
   # MyPage route
   get 'mypage', to: 'users#show'
 
+  # myaccount_page routes
+  get 'account', to: 'users#account'
+
   # Posts routes
   resources :posts, only: [:index, :new, :create, :show]
 
   get 'search', to: 'posts#index', as: 'search'
+
+  get 'users/edit_password', to: 'users#edit_password', as: 'edit_password'
+  patch 'users/update_password', to: 'users#update_password', as: 'update_password'
+
 
   # Nested resources for users
   resources :users, only: [:create, :show] do
