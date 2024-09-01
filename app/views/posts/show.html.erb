@@ -1,9 +1,35 @@
-<h1><%= @post.beans_name %></h1>
-<p>購入店舗: <%= @post.store_name %></p>
-<p>焙煎度: <%= @post.roast_level %></p>
-<p>生産地: <%= @post.coffee_growing_regions %></p>
-<p>メモ: <%= @post.memo %></p>
+<body>
+  <div class="container">
+      <div class="post">
+        <div class="post-container">
+          <div class="post-image">
+            <% if @post.photo.attached? %>
+              <%= image_tag(@post.photo, alt: @post.beans_name, size: "300x300") %>
+            <% end %>
+          </div>
+          <div class="post-content">
+            <h2><%= @post.beans_name %></h2>
+            <p>購入店舗: <%= @post.store_name %></p>
+            <% roast_levels = {
+              'raw_beans' => '生豆 (raw beans)',
+              'light_roast' => 'ライトロースト (Light roast)',
+              'cinnamon_roast' => 'シナモンロースト (Cinnamon roast)',
+              'medium_roast' => 'ミディアムロースト (Medium roast)',
+              'high_roast' => 'ハイロースト (High roast)',
+              'city_roast' => 'シティロースト (City roast)',
+              'fullcity_roast' => 'フルシティロースト (Fullcity roast)',
+              'french_roast' => 'フレンチロースト (French roast)',
+              'italian_roast' => 'イタリアンロースト (Italian roast)'
+            } %>
+            <p>焙煎度: <%= roast_levels[@post.roast_level] || '不明な焙煎度' %></p>
+            <p>生産地: <%= @post.coffee_growing_regions %></p>
+            <p>メモ: <%= @post.memo %></p>
 
-<% if @post.photo.attached? %>
-  <%= image_tag @post.photo %>  <!-- アップロードされた写真を表示 -->
-<% end %>
+            <% if logged_in? && current_user == @post.user %>
+              <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn-primary btn-small" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>

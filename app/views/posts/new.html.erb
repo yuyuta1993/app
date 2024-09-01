@@ -24,17 +24,7 @@
 
   <div class="field">
     <%= form.label :roast_level, '焙煎度' %><br>
-    <%= form.select :roast_level, options_for_select([
-      ['生豆 (raw beans)', 0],
-      ['ライトロースト (Light roast)', 1],
-      ['シナモンロースト (Cinnamon roast)', 2],
-      ['ミディアムロースト (Medium roast)', 3],
-      ['ハイロースト (High roast)', 4],
-      ['シティロースト (City roast)', 5],
-      ['フルシティロースト (Fullcity roast)', 6],
-      ['フレンチロースト (French roast)', 7],
-      ['イタリアンロースト (Italian roast)', 8]
-    ]), { include_blank: '選択してください' } %>
+    <%= form.select :roast_level, options_for_select(Post.roast_level_names.map { |key, value| [value, Post.roast_levels[key]] }), { include_blank: '選択してください' } %>
   </div>
 
   <div class="field">
@@ -56,3 +46,4 @@
     <%= form.submit '投稿する' %>
   </div>
 <% end %>
+

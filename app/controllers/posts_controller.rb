@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :require_login, except: [:index, :show]
-
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:q].present?
@@ -43,7 +43,20 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post.destroy
+    redirect_to posts_path, notice: "投稿を削除しました。"
+  end
+
   private
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def correct_user
+    redirect_to(root_path) unless current_user == @post.user
+  end
 
   def post_params
     params.require(:post).permit(:store_name, :beans_name, :roast_level, :coffee_growing_regions, :photo, :memo)

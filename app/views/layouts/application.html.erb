@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CoffeeBlog</title>
+  <title>コーヒー管理アプリ</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
-  <%= javascript_importmap_tags %>
+  <link rel="stylesheet" href="/assets/application.css" />
+  <%= javascript_include_tag 'application' %>
 </head>
 
 <body>
@@ -14,8 +13,8 @@
     <%= render 'shared/header' %>
   </header>
   
-  <header style="background-image: url('<%= asset_path('coffee_beans.jpg') %>'); background-size: cover; text-align: center; padding: 100px 0;">
-  </header>
+  <div style="background-image: url('<%= asset_path('coffee_beans.jpg') %>'); background-size: cover; text-align: center; padding: 100px 0;">
+  </div>
   
   <%= yield %>
 </body>

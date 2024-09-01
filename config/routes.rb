@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'account', to: 'users#account'
 
   # Posts routes
-  resources :posts, only: [:index, :new, :create, :show]
+  resources :posts
 
   get 'search', to: 'posts#index', as: 'search'
 
