@@ -1,29 +1,50 @@
+@charset "utf-8";
+
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
 
+
 .posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 24px 6%;
 }
 
 .post {
+  margin: 20px;
   padding: 20px;
-  background: #f4f4f4;
+  background: #a3a3a3;
   border-radius: 8px;
 }
 
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px 6%;
+}
+
+.post-image {
+  flex: 1;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.post-content {
+  flex: 2;
+  margin-left: 50px;
+}
+
 .btn-primary {
-  display: block;
   text-align: center;
   margin: 20px auto;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #fc7171;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .navbar {
@@ -36,7 +57,7 @@
 
 .navbar a {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -63,7 +84,7 @@
 .navbar-center {
   flex-grow: 1;
   display: flex;
-  justify-content: center; /* 検索フォームを中央に配置 */
+  justify-content: center;
 }
 
 .search-form {
@@ -91,7 +112,13 @@
   background-color: #4cae4c;
 }
 
-/* 他のメニュー項目もフレックスで配置 */
 .navbar-menu {
   display: flex;
+}
+
+.btn-small {
+  width: 100px;
+  padding: 5px 10px;
+  display: inline-block;
+  text-align: center;
 }
