@@ -26,6 +26,7 @@
             <p>メモ: <%= @post.memo %></p>
 
             <% if logged_in? && current_user == @post.user %>
+              <%= link_to '編集', edit_post_path(@post), class: "btn-primary btn-small" %>
               <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn-primary btn-small" %>
             <% end %>
           </div>

@@ -25,3 +25,6 @@ EXPOSE 3000
 
 # サーバーを起動
 CMD ["rails", "server", "-b", "0.0.0.0"]
+
+# libvipsのインストールを追加
+RUN apt-get update && apt-get install -y libvips42

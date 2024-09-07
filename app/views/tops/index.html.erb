@@ -1,13 +1,25 @@
 <div class="container">
-  <h2>最新投稿</h2>
-  <div class="posts">
-    <% @posts.each do |post| %>
-      <div class="post">
-        <h3><%= link_to post.beans_name, post_path(post) %></h3>
-        <p><%= truncate(post.memo, length: 100) %></p>
-      </div>
+  <h1>最新投稿</h1>
+
+  <div class="post-container">
+    <% if @posts.any? %>
+      <% @posts.each do |post| %>
+        <div class="post">
+          <% if post.photo.attached? %>
+            <%= image_tag post.photo, alt: '投稿の画像', class: 'posts-image' %>
+          <% end %>
+          <h2><%= link_to post.store_name, post_path(post) %></h2>
+        </div>
+      <% end %>
+    <% else %>
+      <p>検索に一致する投稿がありません。</p>
     <% end %>
   </div>
-
-  <%= link_to 'More', posts_path, class: 'btn btn-primary' if @posts.count > 6 %>
+  
+  <!-- ボタンを post-container の外に移動して、ページ全体で中央に配置する -->
+  <% if Post.count >= 6 %>
+    <div class="center-button">
+      <%= link_to '投稿一覧を見る', posts_path, class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 </div>
