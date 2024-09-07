@@ -6,12 +6,13 @@
     <% if @posts.any? %>
       <% @posts.take(3).each do |post| %>  <!-- 最初の3件のみを取得 -->
         <div class="post">
-          <% if post.photo.attached? %>
-            <%= image_tag post.photo, alt: '投稿の画像', class: 'posts-image' %>
+          <% if post.present? && post.photo.present? %>
+            <%= image_tag(post.photo, alt: '投稿の画像', class: 'posts-image') %>
+          <% else %>
+            <%= image_tag('no_image.jpg', alt: '投稿の画像', class: 'posts-image') %>
           <% end %>
           <h2><%= link_to post.store_name, post_path(post) %></h2>
-          <p><%= post.beans_name %></p>
-          <p>焙煎度: <%= Post.roast_level_names[post.roast_level.to_sym] %></p>
+          <p><%= Post.roast_level_names[post.roast_level.to_sym] %></p>
         </div>
       <% end %>
     <% else %>
