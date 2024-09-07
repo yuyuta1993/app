@@ -12,7 +12,7 @@
           <% end %>
           <h2><%= link_to post.store_name, post_path(post) %></h2>
           <p>コーヒー豆: <%= post.beans_name %></p>
-          <p>焙煎度: <%= post.roast_level %></p>
+          <p>焙煎度: <%= Post.roast_level_names[post.roast_level.to_sym] %></p>
           <p>生産地: <%= post.coffee_growing_regions %></p>
         </div>
       <% end %>

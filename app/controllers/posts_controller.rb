@@ -5,12 +5,25 @@ class PostsController < ApplicationController
 
   def index
     if params[:q].present?
-      search_query = params[:q]
-      roast_level = Post.roast_levels.key(search_query)
+      search_query = params[:q].strip
+      roast_level = find_roast_level_by_query(search_query)  # 検索キーワードに基づいて焙煎度を見つける
+
+      query_conditions = [
+        "store_name LIKE :query",
+        "beans_name LIKE :query",
+        "coffee_growing_regions LIKE :query",
+        "memo LIKE :query"
+      ]
+
+      # roast_level が見つかった場合に条件に追加
+      if roast_level
+        query_conditions << "roast_level = :roast_level"
+      end
 
       @posts = Post.where(
-        "store_name LIKE :query OR beans_name LIKE :query OR coffee_growing_regions LIKE :query OR memo LIKE :query OR roast_level = :roast_level",
-        query: "%#{search_query}%", roast_level: roast_level
+        query_conditions.join(" OR "),
+        query: "%#{search_query}%",
+        roast_level: roast_level
       )
     else
       @posts = Post.all
@@ -53,6 +66,15 @@ class PostsController < ApplicationController
 
   private
 
+  # 検索キーワードに部分一致する焙煎度を返す
+  def find_roast_level_by_query(query)
+    # 日本語の焙煎度名または英語の焙煎度名に部分一致するものを探す
+    Post.roast_level_names.each do |key, name|
+      return Post.roast_levels[key] if name.include?(query) || key.to_s.include?(query.downcase)
+    end
+    nil  # 見つからない場合はnilを返す
+  end
+
   def set_post
     @post = Post.find(params[:id])
   end
@@ -75,3 +97,4 @@ class PostsController < ApplicationController
     end
   end
 end
+
