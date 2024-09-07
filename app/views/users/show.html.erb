@@ -1,23 +1,46 @@
-<h1><%= @user.user_name %>'s My Page</h1>
+<div class="container">
+  <h1>マイページ</h1>
 
-<h2>My Posts</h2>
-<div class="posts">
-  <% @posts.each do |post| %>
-    <div class="post">
-      <h3><%= link_to post.beans_name, post_path(post) %></h3>
-      <p><%= truncate(post.memo, length: 100) %></p>
+  <h2>投稿内容</h2>
+  <div class="post-container">
+    <% if @posts.any? %>
+      <% @posts.take(3).each do |post| %>  <!-- 最初の3件のみを取得 -->
+        <div class="post">
+          <% if post.photo.attached? %>
+            <%= image_tag post.photo, alt: '投稿の画像', class: 'posts-image' %>
+          <% end %>
+          <h2><%= link_to post.store_name, post_path(post) %></h2>
+          <p><%= post.beans_name %></p>
+          <p>焙煎度: <%= Post.roast_level_names[post.roast_level.to_sym] %></p>
+        </div>
+      <% end %>
+    <% else %>
+      <p>検索に一致する投稿がありません。</p>
+    <% end %>
+  </div>
+
+  <!-- ボタンを中央に配置 -->
+  <% if @posts.count >= 6 %>
+    <div class="center-button">
+      <%= link_to 'More', user_posts_path(@user), class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+
+  <h2>お気に入り</h2>
+  <div class="post-container">
+    <% @favorites.take(3).each do |post| %>  <!-- 最初の3件のみを取得 -->
+      <div class="post">
+        <h3><%= link_to post.title, post_path(post) %></h3>
+        <p><%= truncate(post.content, length: 100) %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- お気に入りの「More」ボタンも中央に配置 -->
+  <% if @favorites.count >= 6 %>
+    <div class="center-button">
+      <%= link_to 'More', user_favorites_path(@user), class: 'btn btn-primary' %>
     </div>
   <% end %>
 </div>
-<%= link_to 'More', user_posts_path(@user), class: 'btn btn-primary' if @posts.count >= 6 %>
 
-<h2>My Favorite Posts</h2>
-<div class="favorites">
-  <% @favorites.each do |post| %>
-    <div class="favorite-post">
-      <h3><%= link_to post.title, post_path(post) %></h3>
-      <p><%= truncate(post.content, length: 100) %></p>
-    </div>
-  <% end %>
-</div>
-<%= link_to 'More', user_favorites_path(@user), class: 'btn btn-primary' if @favorites.count >= 6 %>

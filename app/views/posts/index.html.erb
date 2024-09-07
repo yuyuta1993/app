@@ -1,10 +1,11 @@
 <div class="container">
-  <h1>投稿一覧</h1>
+  <h1>最新投稿</h1>
 
   <div class="post-container">
     <% if @posts.any? %>
       <% @posts.each do |post| %>
         <div class="post">
+          <%= image_tag post.photo, alt: '投稿の画像', class: 'posts-image' if post.photo.present? %>
           <h2><%= link_to post.store_name, post_path(post) %></h2>
           <p>コーヒー豆: <%= post.beans_name %></p>
           <p>焙煎度: <%= post.roast_level %></p>

@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
-  before_action :require_login, except: [:index, :show]
+  before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     if params[:q].present?
       search_query = params[:q]
-
-      roast_level = Post.roast_levels.key(search_query) # Enum 検索用
+      roast_level = Post.roast_levels.key(search_query)
 
       @posts = Post.where(
         "store_name LIKE :query OR beans_name LIKE :query OR coffee_growing_regions LIKE :query OR memo LIKE :query OR roast_level = :roast_level",
@@ -22,9 +22,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    roast_level_param = post_params[:roast_level].to_i
-
-    @post = current_user.posts.build(post_params.merge(roast_level: roast_level_param))
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to mypage_path, notice: '投稿が成功しました。'
     else
@@ -34,12 +32,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
-    
-    # 投稿が見つからない場合の処理
-    if @post.nil?
-      flash[:alert] = "投稿が見つかりませんでした。"
-      redirect_to root_path
+  end
+
+  def edit
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to @post, notice: '投稿が更新されました。'
+    else
+      render :edit
     end
   end
 
@@ -55,7 +58,10 @@ class PostsController < ApplicationController
   end
 
   def correct_user
-    redirect_to(root_path) unless current_user == @post.user
+    if @post.nil? || current_user != @post.user
+      flash[:alert] = "この操作を実行する権限がありません。"
+      redirect_to(root_path)
+    end
   end
 
   def post_params

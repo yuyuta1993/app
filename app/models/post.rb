@@ -21,25 +21,18 @@ class Post < ApplicationRecord
   validates :beans_name, presence: true
   validates :roast_level, inclusion: { in: roast_levels.keys }
 
-  # 日本語表記を提供するメソッド
   def self.roast_level_names
     {
-      raw_beans: '生豆 (raw beans)',
-      light_roast: 'ライトロースト (Light roast)',
-      cinnamon_roast: 'シナモンロースト (Cinnamon roast)',
-      medium_roast: 'ミディアムロースト (Medium roast)',
-      high_roast: 'ハイロースト (High roast)',
-      city_roast: 'シティロースト (City roast)',
-      fullcity_roast: 'フルシティロースト (Fullcity roast)',
-      french_roast: 'フレンチロースト (French roast)',
-      italian_roast: 'イタリアンロースト (Italian roast)'
+      raw_beans: '生豆',
+      light_roast: 'ライトロースト',
+      cinnamon_roast: 'シナモンロースト',
+      medium_roast: 'ミディアムロースト',
+      high_roast: 'ハイロースト',
+      city_roast: 'シティロースト',
+      fullcity_roast: 'フルシティロースト',
+      french_roast: 'フレンチロースト',
+      italian_roast: 'イタリアンロースト'
     }
   end
 
-  # 焙煎度の表示名を取得するインスタンスメソッド
-  def roast_level_text
-    self.class.roast_level_names[roast_level.to_sym] || '不明な焙煎度'
-  end
 end
-
-

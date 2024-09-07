@@ -1,10 +1,7 @@
-@charset "utf-8";
-
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
-
 
 .posts {
   display: grid;
@@ -13,16 +10,24 @@
 }
 
 .post {
-  margin: 20px;
+  background-color: #f4f4f4;
   padding: 20px;
-  background: #a3a3a3;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .post-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px 6%;
+}
+
+.posts-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 .post-image {
@@ -45,6 +50,13 @@
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
+}
+
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
 }
 
 .navbar {

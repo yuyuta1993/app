@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= form.label :roast_level, '焙煎度' %><br>
-    <%= form.select :roast_level, options_for_select(Post.roast_level_names.map { |key, value| [value, Post.roast_levels[key]] }), { include_blank: '選択してください' } %>
+    <%= form.select :roast_level, options_for_select(Post.roast_level_names.map { |key, value| [value, key] }), include_blank: '選択してください' %>
   </div>
 
   <div class="field">
