@@ -3,23 +3,25 @@
       <div class="post">
         <div class="post-container">
           <div class="post-image">
-            <% if @post.photo.attached? %>
-              <%= image_tag(@post.photo, alt: @post.beans_name, size: "300x300") %>
+            <% if @post.present? && @post.photo.present? %>
+              <%= image_tag(@post.photo, alt: '投稿の画像', class: 'posts-image') %>
+            <% else %>
+              <%= image_tag('no_image.jpg', alt: '投稿の画像', class: 'posts-image') %>
             <% end %>
           </div>
           <div class="post-content">
-            <h2><%= @post.beans_name %></h2>
-            <p>購入店舗: <%= @post.store_name %></p>
+            <h2><%= @post.store_name %></h2>
+            <p><%= @post.beans_name %></p>
             <% roast_levels = {
-              'raw_beans' => '生豆 (raw beans)',
-              'light_roast' => 'ライトロースト (Light roast)',
-              'cinnamon_roast' => 'シナモンロースト (Cinnamon roast)',
-              'medium_roast' => 'ミディアムロースト (Medium roast)',
-              'high_roast' => 'ハイロースト (High roast)',
-              'city_roast' => 'シティロースト (City roast)',
-              'fullcity_roast' => 'フルシティロースト (Fullcity roast)',
-              'french_roast' => 'フレンチロースト (French roast)',
-              'italian_roast' => 'イタリアンロースト (Italian roast)'
+              'raw_beans' => '生豆',
+              'light_roast' => 'ライトロースト',
+              'cinnamon_roast' => 'シナモンロースト',
+              'medium_roast' => 'ミディアムロースト',
+              'high_roast' => 'ハイロースト',
+              'city_roast' => 'シティロースト',
+              'fullcity_roast' => 'フルシティロースト',
+              'french_roast' => 'フレンチロースト',
+              'italian_roast' => 'イタリアンロースト'
             } %>
             <p>焙煎度: <%= roast_levels[@post.roast_level] || '不明な焙煎度' %></p>
             <p>生産地: <%= @post.coffee_growing_regions %></p>

@@ -1,7 +1,7 @@
 <div class="container">
   <h1>マイページ</h1>
 
-  <h2>投稿内容</h2>
+  <h2>自身の投稿</h2>
   <div class="post-container">
     <% if @posts.any? %>
       <% @posts.take(3).each do |post| %>  <!-- 最初の3件のみを取得 -->
@@ -16,12 +16,12 @@
         </div>
       <% end %>
     <% else %>
-      <p>検索に一致する投稿がありません。</p>
+      <p>表示できる投稿がありません。</p>
     <% end %>
   </div>
 
   <!-- ボタンを中央に配置 -->
-  <% if @posts.count >= 6 %>
+  <% if @posts.count >= 3 %>
     <div class="center-button">
       <%= link_to 'More', user_posts_path(@user), class: 'btn btn-primary' %>
     </div>
@@ -31,14 +31,19 @@
   <div class="post-container">
     <% @favorites.take(3).each do |post| %>  <!-- 最初の3件のみを取得 -->
       <div class="post">
-        <h3><%= link_to post.title, post_path(post) %></h3>
-        <p><%= truncate(post.content, length: 100) %></p>
+      <% if post.present? && post.photo.present? %>
+      <%= image_tag(post.photo, alt: '投稿の画像', class: 'posts-image') %>
+    <% else %>
+      <%= image_tag('no_image.jpg', alt: '投稿の画像', class: 'posts-image') %>
+    <% end %>
+    <h2><%= link_to post.store_name, post_path(post) %></h2>
+    <p><%= Post.roast_level_names[post.roast_level.to_sym] %></p>
       </div>
     <% end %>
   </div>
 
   <!-- お気に入りの「More」ボタンも中央に配置 -->
-  <% if @favorites.count >= 6 %>
+  <% if @favorites.count >= 3 %>
     <div class="center-button">
       <%= link_to 'More', user_favorites_path(@user), class: 'btn btn-primary' %>
     </div>

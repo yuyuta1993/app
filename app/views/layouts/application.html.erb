@@ -5,6 +5,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <link rel="stylesheet" href="/assets/application.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <%= javascript_include_tag 'application' %>
 </head>
 
@@ -15,6 +16,13 @@
   
   <div style="background-image: url('<%= asset_path('coffee_beans.jpg') %>'); background-size: cover; text-align: center; padding: 100px 0;">
   </div>
+
+  <% if flash[:alert] %>
+  <div class="alert alert-danger"><%= flash[:alert] %></div>
+<% end %>
+<% if flash[:notice] %>
+  <div class="alert alert-success"><%= flash[:notice] %></div>
+<% end %>
   
   <%= yield %>
 </body>

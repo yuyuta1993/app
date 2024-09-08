@@ -45,6 +45,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])  # params[:id]で指定された投稿を取得
   end
 
   def edit
@@ -66,13 +67,11 @@ class PostsController < ApplicationController
 
   private
 
-  # 検索キーワードに部分一致する焙煎度を返す
   def find_roast_level_by_query(query)
-    # 日本語の焙煎度名または英語の焙煎度名に部分一致するものを探す
     Post.roast_level_names.each do |key, name|
       return Post.roast_levels[key] if name.include?(query) || key.to_s.include?(query.downcase)
     end
-    nil  # 見つからない場合はnilを返す
+    nil
   end
 
   def set_post
@@ -97,4 +96,3 @@ class PostsController < ApplicationController
     end
   end
 end
-
