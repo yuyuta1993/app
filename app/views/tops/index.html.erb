@@ -11,14 +11,36 @@
             <%= image_tag('no_image.jpg', alt: '投稿の画像', class: 'posts-image') %>
           <% end %>
           <h2><%= link_to post.store_name, post_path(post) %></h2>
+          <p><%= post.beans_name %></p>
+          <p><%= Post.roast_level_names[post.roast_level.to_sym] %></p>
+
+          <!-- ログインしている場合のみお気に入りボタンを表示 -->
+          <% if logged_in? && post.user_id != current_user.id %>
+            <span class="favorite" data-post-id="<%= post.id %>">
+              <% if favorite = current_user.favorites.find_by(post_id: post.id) %>
+                <!-- お気に入り解除フォーム -->
+                <%= form_with url: favorite_path(favorite), method: :delete, local: true do %>
+                  <button type="submit" class="star-button">
+                    <i class="fas fa-star filled"></i> <!-- 塗りつぶされた星 -->
+                  </button>
+                <% end %>
+              <% else %>
+                <!-- お気に入り登録フォーム -->
+                <%= form_with url: favorites_path(post_id: post.id), method: :post, local: true do %>
+                  <button type="submit" class="star-button">
+                    <i class="far fa-star"></i> <!-- 空の星 -->
+                  </button>
+                <% end %>
+              <% end %>
+            </span>
+          <% end %>
         </div>
       <% end %>
     <% else %>
-      <p>検索に一致する投稿がありません。</p>
+      <p>表示できる投稿がありません。</p>
     <% end %>
   </div>
-  
-  <!-- ボタンを post-container の外に移動して、ページ全体で中央に配置する -->
+
   <% if Post.count >= 6 %>
     <div class="center-button">
       <%= link_to '投稿一覧を見る', posts_path, class: 'btn btn-primary' %>

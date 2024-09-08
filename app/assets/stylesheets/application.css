@@ -134,3 +134,11 @@
   display: inline-block;
   text-align: center;
 }
+
+.filled {
+  color: gold;
+}
+
+.favorite {
+  cursor: pointer;
+}

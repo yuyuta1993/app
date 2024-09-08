@@ -1,23 +1,21 @@
 <div class="container">
-  <h1><%= params[:q].present? ? "「#{params[:q]}」の検索結果" : "最新投稿" %></h1>
+  <h1>お気に入り投稿一覧</h1>
 
   <div class="post-container">
-    <% if @posts.any? %>
-      <% @posts.each do |post| %>
+    <% if @favorite_posts.any? %>
+      <% @favorite_posts.each do |post| %>
         <div class="post">
-          <% if post.present? && post.photo.present? %>
+          <% if post.photo.present? %>
             <%= image_tag(post.photo, alt: '投稿の画像', class: 'posts-image') %>
           <% else %>
             <%= image_tag('no_image.jpg', alt: '投稿の画像', class: 'posts-image') %>
           <% end %>
           <h2><%= link_to post.store_name, post_path(post) %></h2>
-          <p><%= post.beans_name %></p>
-          <p><%= Post.roast_level_names[post.roast_level.to_sym] %></p>
-          <p><%= post.coffee_growing_regions %></p>
+          <p><%= truncate(post.memo, length: 100) %></p>
         </div>
       <% end %>
     <% else %>
-      <p>表示できる投稿がありません。</p>
+      <p>お気に入りに登録された投稿はありません。</p>
     <% end %>
   </div>
 </div>
