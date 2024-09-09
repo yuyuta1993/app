@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'users/edit_password', to: 'users#edit_password', as: 'edit_password'
   patch 'users/update_password', to: 'users#update_password', as: 'update_password'
 
+  resources :favorites, only: [:create, :destroy, :index]
 
   # Nested resources for users
   resources :users, only: [:create, :show] do
@@ -31,4 +32,3 @@ Rails.application.routes.draw do
     get 'favorites', to: 'favorites#index' 
   end
 end
-
