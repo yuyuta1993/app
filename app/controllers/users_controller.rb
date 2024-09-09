@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user  # 現在のログインユーザー
     @posts = @user.posts.limit(6).order(created_at: :desc)  # 自身の投稿
-    @favorites = @user.favorited_posts.limit(6).order(created_at: :desc)  # お気に入り投稿
+    @favorites = @user.favorite_posts.limit(6).order(created_at: :desc)  # お気に入り投稿
   end
 
   def account
