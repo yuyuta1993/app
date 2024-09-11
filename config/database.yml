@@ -1,6 +1,15 @@
-development:
-  adapter: mysql2
-  encoding: utf8
+# development:
+  # adapter: mysql2
+  # encoding: utf8
+  # database: coffee_app
+  # username: root
+  # password: password
+  # host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: coffee_app
   username: root
   password: password
