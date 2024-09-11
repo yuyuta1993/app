@@ -1,5 +1,5 @@
 # ベースイメージとして Ruby を使用
-FROM ruby:3.0.2
+FROM ruby:3.1.0
 
 # 必要なライブラリをインストール
 RUN apt-get update -qq && apt-get install -y nodejs default-mysql-client

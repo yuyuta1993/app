@@ -78,3 +78,7 @@ group :test do
 end
 
 # gem "foreman", "~> 0.88.1"
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "aws-sdk-s3", "~> 1.161", :require => false
