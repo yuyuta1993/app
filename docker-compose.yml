@@ -11,7 +11,7 @@ services:
       MYSQL_PASSWORD: password
 
   web:
-    image: ruby:3.0.2
+    image: ruby:3.1.0
     build: .
     command: bundle exec rails server -b 0.0.0.0
     volumes:
