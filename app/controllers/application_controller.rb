@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method  :logged_in?, :current_user
+  protect_from_forgery with: :exception
 
   def logged_in?
     !!session[:user_id] || !current_user.nil?
@@ -15,4 +16,5 @@ class ApplicationController < ActionController::Base
       redirect_to login_path # ログインページにリダイレクト
     end
   end
+  
 end

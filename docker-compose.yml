@@ -8,6 +8,8 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
       POSTGRES_DB: app_development
+    ports:
+      - "5432:5432"
 
   web:
     image: ruby:3.1.0
@@ -20,7 +22,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: mysql2://user:password@db:3306/app_development
+      DATABASE_URL: postgres://user:password@db:5432/app_development
       RAILS_ENV: development
 
 volumes:
