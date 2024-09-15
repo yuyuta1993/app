@@ -10,10 +10,16 @@ const application = Application.start();
 const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
 
-application.debug = false
-window.Stimulus   = application
+application.debug = false;
+window.Stimulus = application;
 
-const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-console.log('CSRF Token:', csrfToken);
+// CSRFトークンが存在するか確認
+const csrfMetaTag = document.querySelector('meta[name="csrf-token"]');
+if (csrfMetaTag) {
+  const csrfToken = csrfMetaTag.content;
+  console.log('CSRF Token:', csrfToken);
+} else {
+  console.error('CSRFトークンのmetaタグが見つかりませんでした。');
+}
 
-export { application }
+export { application };
