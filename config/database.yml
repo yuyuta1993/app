@@ -1,16 +1,18 @@
-# development:
-  # adapter: mysql2
-  # encoding: utf8
-  # database: coffee_app
-  # username: root
-  # password: password
-  # host: localhost
-
-production:
+default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: coffee_app
-  username: root
-  password: password
-  host: localhost
+  username: <%= ENV['DATABASE_USER'] || 'user' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'password' %>
+  host: <%= ENV['DATABASE_HOST'] || 'db' %>
+
+development:
+  <<: *default
+  database: coffee_app_development
+
+production:
+  <<: *default
+  database: coffee_app_production
+  username: <%= ENV['DATABASE_USER'] || 'app_wild_paper_3419' %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] || 'late-sun-9601.flycast' %>
