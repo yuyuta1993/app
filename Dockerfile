@@ -2,7 +2,7 @@
 FROM ruby:3.1.0
 
 # 必要なライブラリをインストール
-RUN apt-get update -qq && apt-get install -y nodejs default-mysql-client
+RUN apt-get update -qq && apt-get install -y nodejs libpq-dev
 
 # 作業ディレクトリを作成
 WORKDIR /app
