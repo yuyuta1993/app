@@ -1,10 +1,13 @@
-import Rails from "@rails/ujs";
+// application.js
+import Rails from "@rails/ujs"; // rails-ujsの機能をインポート
 import { Application } from "stimulus";
-import '../../javascript/packs/favorite'
+import { definitionsFromContext } from "stimulus/webpack-helpers";
 
+// rails-ujsを有効化
 Rails.start();
 console.log("Rails UJS has been started.");
 
+// Stimulusの初期化
 const application = Application.start();
 const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
@@ -12,7 +15,7 @@ application.load(definitionsFromContext(context));
 application.debug = false;
 window.Stimulus = application;
 
-// CSRFトークンが存在するか確認
+// CSRFトークンの確認
 const csrfMetaTag = document.querySelector('meta[name="csrf-token"]');
 if (csrfMetaTag) {
   const csrfToken = csrfMetaTag.content;
@@ -21,4 +24,3 @@ if (csrfMetaTag) {
   console.error('CSRFトークンのmetaタグが見つかりませんでした。');
 }
 
-export { application };
