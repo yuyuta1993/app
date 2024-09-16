@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    if user&.authenticate(params[:password])  # Rails標準のauthenticateメソッド
+      session[:user_id] = user.id  # セッションにユーザーIDを保存
       redirect_to mypage_path, notice: "ログインに成功しました。"
     else
       flash.now[:alert] = "メールアドレスまたはパスワードが間違っています。"
@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session[:user_id] = nil  # セッションをクリアしてログアウト
     redirect_to root_path, status: :see_other
   end
 end
+

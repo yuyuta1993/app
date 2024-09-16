@@ -17,7 +17,13 @@
         <li><%= link_to 'マイページ', mypage_path %></li>
         <li><%= link_to 'アカウント', account_path %></li>
         <li><%= link_to '新規投稿', new_post_path %></li>
-        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+
+        <li>
+          <%= form_with(url: logout_path, method: :delete, local: true) do %>
+            <%= submit_tag 'ログアウト', class: 'logout-button' %>
+          <% end %>
+        </li>
+        
       <% else %>
         <li><%= link_to '新規登録', signup_path %></li>
         <li><%= link_to 'ログイン', login_path %></li>

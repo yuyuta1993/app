@@ -1,6 +1,8 @@
 ./bin/dev
 /public/assets
 tmp/cache/
-/log/*.log
+log/*.log
 /tmp/
 /storage/
+.bundle/
+vendor/
