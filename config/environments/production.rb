@@ -2,6 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   config.force_ssl = true
+  config.session_store :cookie_store, key: '_app_wild_paper_3419_session', secure: Rails.env.production?, same_site: :lax
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
