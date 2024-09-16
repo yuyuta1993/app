@@ -1,6 +1,5 @@
 import Rails from "@rails/ujs";
 import { Application } from "stimulus";
-// import { definitionsFromContext } from "stimulus/webpack-helpers";
 import '../../javascript/packs/favorite'
 
 Rails.start();
