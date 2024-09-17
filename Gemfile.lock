@@ -169,8 +169,6 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
-    rails-ujs (0.1.0)
-      railties (>= 3.1)
     railties (7.0.8.4)
       actionpack (= 7.0.8.4)
       activesupport (= 7.0.8.4)
@@ -209,9 +207,6 @@ GEM
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     web-console (4.2.1)
@@ -235,23 +230,22 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bcrypt (~> 3.1.7)
+  bcrypt (~> 3.1)
   bootsnap
   capybara
   debug
   dockerfile-rails (>= 1.6)
+  i18n (= 1.14.5)
   image_processing (~> 1.2)
   importmap-rails
-  jbuilder
-  pg (>= 0.18, < 2.0)
+  jbuilder (~> 2.12.0)
+  pg (>= 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
-  rails-ujs
   selenium-webdriver
   sprockets-rails
   stimulus-rails
   turbo-rails (~> 2.0.6)
-  turbolinks (~> 5)
   tzinfo-data
   web-console
   webdrivers
