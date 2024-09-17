@@ -25,7 +25,8 @@ gem 'turbo-rails', '~> 2.0.6'
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+gem 'jbuilder', '~> 2.12.0'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -34,7 +35,7 @@ gem "jbuilder"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -46,16 +47,12 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
 
+gem 'i18n', '1.14.5'
 
-gem 'pg', '>= 0.18', '< 2.0'
-
-gem 'turbolinks', '~> 5'
+gem 'pg', '>= 1.1'
 
 gem 'image_processing', '~> 1.2'
-
-gem 'rails-ujs'
 
 # gem 'sorcery'
 
