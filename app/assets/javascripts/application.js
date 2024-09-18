@@ -23,4 +23,3 @@ if (csrfMetaTag) {
 } else {
   console.error('CSRFトークンのmetaタグが見つかりませんでした。');
 }
-

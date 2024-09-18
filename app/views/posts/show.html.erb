@@ -28,11 +28,18 @@
             <p>メモ: <%= @post.memo %></p>
 
             <% if logged_in? && current_user == @post.user %>
-              <%= link_to '編集', edit_post_path(@post), class: "btn-primary btn-small" %>
-              <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn-primary btn-small" %>
+              <div class="button-group">
+                <%= link_to '編集', edit_post_path(@post), class: "btn-primary btn-small" %>
+                
+                <%= form_with(url: post_path(@post), method: :delete, local: true, class: "inline-form") do %>
+                  <%= submit_tag '削除', class: "btn-primary btn-small", data: { confirm: "本当に削除しますか？" } %>
+                <% end %>
+              </div>
             <% end %>
           </div>
         </div>
       </div>
   </div>
 </body>
+
+
